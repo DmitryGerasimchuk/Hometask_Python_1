@@ -12,10 +12,11 @@
 #
 # Решение:
 sumBirds = int(input("Введите итоговое число бумажных журавликов, которые сделали ребята: "))
-print(sumBirds)
+# Рассуждение по решению задачи:
 # pBirds + kBirds + sBirds = sumBirds
 # pBirds = sBirds
-# kBirds = 2*(pBirds + sBirds)
+# kBirds = 2*(pBirds + sBirds) = 2*(pBirds + pBirds) = 4*pBirds
+# pBirds + pBirds + 4*pBirds = 6*pBirds = sumBirds
 pBirds = sumBirds // 6
 print("Петя сделал", pBirds, "бумажных журавликов.")
 sBirds = pBirds
