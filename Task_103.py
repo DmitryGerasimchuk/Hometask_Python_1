@@ -11,28 +11,24 @@
 #
 # Решение:
 numberTicket = int(input("Введите номер Вашего билета: "))
-print(numberTicket)
-firstNumbers = numberTicket // 1000
-# print(firstNumbers)
-secondNumbers = numberTicket % 1000
-# print(secondNumbers)
-firstNumbersOne = firstNumbers % 10
-firstNumbersTwo = firstNumbers // 10 % 10
-firstNumbersThree = firstNumbers // 100 % 10
-sumFirstNumbers = firstNumbersOne + firstNumbersTwo + firstNumbersThree
-# print(firstNumbersOne)
-# print(firstNumbersTwo)
-# print(firstNumbersThree)
-# print(sumFirstNumbers)
-secondNumbersOne = secondNumbers % 10
-secondNumbersTwo = secondNumbers // 10 % 10
-secondNumbersThree = secondNumbers // 100 % 10
-sumSecondNumbers = secondNumbersOne + secondNumbersTwo + secondNumbersThree
-# print(secondNumbersOne)
-# print(secondNumbersTwo)
-# print(secondNumbersThree)
-# print(sumSecondNumbers)
-if (sumFirstNumbers == sumSecondNumbers):
-    print("Ура! У тебя в руках счастливый билет.")
+if (numberTicket > 99999 and numberTicket < 1000000):
+    # Получение первой тройки чисел
+    firstNumbers = numberTicket // 1000
+    # Получение второй тройки чисел
+    secondNumbers = numberTicket % 1000
+    # Работа с первой тройкой чисел
+    firstNumbersOne = firstNumbers % 10
+    firstNumbersTwo = firstNumbers // 10 % 10
+    firstNumbersThree = firstNumbers // 100 % 10
+    sumFirstNumbers = firstNumbersOne + firstNumbersTwo + firstNumbersThree
+    # Работа со сторой тройкой чисел
+    secondNumbersOne = secondNumbers % 10
+    secondNumbersTwo = secondNumbers // 10 % 10
+    secondNumbersThree = secondNumbers // 100 % 10
+    sumSecondNumbers = secondNumbersOne + secondNumbersTwo + secondNumbersThree
+    if (sumFirstNumbers == sumSecondNumbers):
+        print("Ура! У тебя в руках счастливый билет.")
+    else:
+        print("Увы и ах! У тебя в руках обычный билет.")
 else:
-    print("Увы и ах! У тебя в руках обычный билет.")
+    print("Вы неправильно ввели номер билета")
