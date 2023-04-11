@@ -7,12 +7,12 @@
 #
 # Решение:
 a = int(input("Введите трехзначное число: "))
-print(a)
-b = a % 10
-# print(b)
-c = a // 10 % 10
-# print(c)
-d = a // 100 % 10
-# print(d)
-sumNumbers = b + c + d
-print(sumNumbers)
+# print(a)
+if (a > 99 and a < 1000):
+    b = a % 10
+    c = a // 10 % 10
+    d = a // 100 % 10
+    sumNumbers = b + c + d
+    print("Сумма чисел указанного числа равна", sumNumbers)
+else:
+    print("Вы ввели не трехзначное число.")
